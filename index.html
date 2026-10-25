@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NGUYEN Thai Bao · Junior marketer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Junior marketer in Brussels, available full-time from February 2027. B2B work placement, plus student projects for Turkuaz, Harriet Allure and Puratos.">
+<meta property="og:title" content="NGUYEN Thai Bao · Junior marketer">
+<meta property="og:description" content="Junior marketer in Brussels, available full-time from February 2027. B2B work placement, plus student projects for Turkuaz, Harriet Allure and Puratos.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ntbao1204-bao.github.io/photo.jpg">
+<meta property="og:url" content="https://ntbao1204-bao.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&family=Overpass:wght@300;400;600;800&display=swap">
+<style>
+/* ---------- Tokens (light is the default) ---------- */
+:root{
+  --paper:#F4F5F3;
+  --ink:#151515;
+  --ink-2:#30363A;
+  --grey:#5F6669;
+  --rule:#D3D9D6;
+  --teal:#0F5257;
+  --teal-hover:#0A3D41;
+  --link:#0F5257;
+  --track:#C2D4D4;
+  --yellow:#F2B705;
+  --ring-edge:#151515;
+  --on-teal:#FFFFFF;
+  --tag-bg:#151515;
+  --tag-fg:#F4F5F3;
+  --btn-hover:#E4E8E6;
+  --photo-edge:rgba(21,21,21,.14);
+  --focus:#151515;
+  color-scheme:light;
+
+  --sans:"Overpass","Bahnschrift","DIN Alternate","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:"Overpass Mono",ui-monospace,"SFMono-Regular","Cascadia Mono",Menlo,Consolas,"Liberation Mono",monospace;
+
+  /* Layout: phone first. The spine sits in the left gutter. */
+  --date-w:0px;
+  --spine-w:32px;
+  --line:2px;
+  --ring:20px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#111314;
+    --ink:#ECEEEB;
+    --ink-2:#C9CECC;
+    --grey:#9CA4A7;
+    --rule:#2D3436;
+    --teal:#4FA3A9;
+    --teal-hover:#68B6BB;
+    --link:#7CC3C8;
+    --track:#21403F;
+    --yellow:#F2B705;
+    --ring-edge:#000000;
+    --on-teal:#0B1213;
+    --tag-bg:#ECEEEB;
+    --tag-fg:#111314;
+    --btn-hover:#1E2324;
+    --photo-edge:rgba(236,238,235,.16);
+    --focus:#ECEEEB;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111314;
+  --ink:#ECEEEB;
+  --ink-2:#C9CECC;
+  --grey:#9CA4A7;
+  --rule:#2D3436;
+  --teal:#4FA3A9;
+  --teal-hover:#68B6BB;
+  --link:#7CC3C8;
+  --track:#21403F;
+  --yellow:#F2B705;
+  --ring-edge:#000000;
+  --on-teal:#0B1213;
+  --tag-bg:#ECEEEB;
+  --tag-fg:#111314;
+  --btn-hover:#1E2324;
+  --photo-edge:rgba(236,238,235,.16);
+  --focus:#ECEEEB;
+  color-scheme:dark;
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--paper);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;font-weight:400;font-kerning:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0}
+img,svg{display:block}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+[tabindex="-1"]:focus{outline:none}
+[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.num,time{font-variant-numeric:tabular-nums lining-nums}
+.num{white-space:nowrap}
+/* Separator dots are set in Overpass Mono: Overpass classes U+00B7 as a
+   combining mark, so browsers give it zero width in the sans. */
+.dot{font-family:var(--mono);font-weight:400;color:var(--grey);margin-inline:-.19em}
+
+/* ---------- Frame ---------- */
+.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0}
+.page{max-width:1120px;margin-inline:auto;padding-block:24px 48px}
+.lane{padding-left:calc(var(--date-w) + var(--spine-w))}
+
+/* ---------- The spine ----------
+   Every [data-seg] block owns one stretch of the line. The pale track is
+   always there; the solid part is drawn per section. Default (no JS,
+   reduced motion) = fully drawn. */
+.seg{position:relative}
+.seg::before,.seg::after{content:"";position:absolute;z-index:0;top:var(--seg-top,0px);bottom:var(--seg-bottom,0px);left:calc(var(--date-w) + var(--spine-w) / 2 - var(--line) / 2);width:var(--line)}
+.seg::before{background:var(--track)}
+.seg::after{background:var(--teal);transform-origin:50% 0;transition:transform .2s cubic-bezier(.3,.7,.3,1) var(--d,0ms)}
+.js-line .seg:not(.is-on)::after{transform:scaleY(0)}
+.seg{--tick-c:var(--teal)}
+.js-line .seg:not(.is-on){--tick-c:var(--track)}
+
+/* Ticks: ruler grades. Section 18/24, item 14, sub-item 8.
+   Overpass sits high in its line box: cap centre = line-height/2 - .1em. */
+.tick{position:relative}
+.tick::before{content:"";position:absolute;z-index:1;height:2px;width:var(--tw,14px);left:calc(var(--spine-w) / -2 - var(--tw,14px) / 2);top:calc(var(--lh) / 2 - .1em - 1px);background:var(--tick-c);transition:background-color .2s var(--d,0ms)}
+
+/* The two yellow rings: "Next" at the top, and the end of the line at Contact */
+.ring{position:absolute;z-index:2;width:var(--ring);height:var(--ring)}
+.ring .o{fill:var(--yellow);stroke:var(--ring-edge);stroke-width:2}
+.ring .i{fill:var(--paper);stroke:var(--ring-edge);stroke-width:1.5}
+
+/* ---------- Masthead ---------- */
+.id-row{display:flex;align-items:center;gap:14px}
+.photo{flex:none;width:84px;height:84px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px var(--photo-edge);background:var(--rule)}
+.name{font-size:34px;line-height:1.02;font-weight:800;letter-spacing:-.02em;text-wrap:balance;min-width:0}
+
+.head{--ring-y:9px;--seg-top:var(--ring-y);margin-top:20px;padding-bottom:30px}
+.head .ring{left:calc(var(--date-w) + var(--spine-w) / 2 - var(--ring) / 2);top:calc(var(--ring-y) - var(--ring) / 2)}
+.next{font-family:var(--mono);font-size:13px;line-height:18px;font-weight:600;color:var(--ink);margin-bottom:10px}
+
+/* role line: two deliberate lines at every width */
+.role{font-size:min(25px, calc((100vw - 66px) / 13));line-height:1.2;font-weight:300;letter-spacing:-.005em}
+.headline{margin-top:14px;font-size:min(19px, calc((100vw - 66px) / 14.5));line-height:1.35;font-weight:600;max-width:34ch;text-wrap:balance}
+
+.proof{list-style:none;margin-top:24px;display:grid;gap:18px}
+.proof li{min-width:0}
+.fig{display:block;font-family:var(--mono);font-weight:600;font-size:24px;line-height:1.15;letter-spacing:-.01em;word-spacing:-.3em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.arrow{display:inline-block;width:.9em;height:.5em;margin:0 .2em 0 .26em;vertical-align:.1em;overflow:visible}
+.arrow path{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:square;stroke-linejoin:miter}
+.proof .txt{display:block;margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:40ch}
+
+.lens-line{margin-top:18px;font-size:14px;line-height:1.5;color:var(--grey)}
+
+.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
+.actions .btn--primary{grid-column:1 / -1}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.2em 18px 0;font:600 15px/1 var(--sans);letter-spacing:.005em;text-decoration:none;color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:2px;white-space:nowrap}
+.btn:hover{background:var(--btn-hover)}
+.btn--primary{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
+.btn--primary:hover{background:var(--teal-hover);border-color:var(--teal-hover)}
+.alt-cv{margin-top:12px;font-size:14px;line-height:1.5}
+
+/* ---------- Sections ---------- */
+.sec{padding-block:26px}
+.sec-title{--tw:18px;--lh:28.8px;font-size:24px;line-height:1.2;font-weight:800;letter-spacing:-.01em;margin-bottom:18px}
+.prose{font-size:17.5px;line-height:1.6;max-width:64ch;text-wrap:pretty}
+
+.lens-intro{font-size:15px;line-height:1.5;color:var(--grey);max-width:62ch;margin:-4px 0 22px}
+
+.items{display:grid;gap:40px}
+.item{min-width:0}
+.what{min-width:0}
+.when{--tw:14px;--lh:20px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-family:var(--mono);font-size:13px;line-height:20px;color:var(--grey);font-variant-numeric:tabular-nums}
+.when.tick::before{top:9px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11.5px;line-height:1;padding:4px 7px 3px;border:1px solid var(--ink);border-radius:3px;color:var(--ink);white-space:nowrap}
+.tag--work{background:var(--tag-bg);border-color:var(--tag-bg);color:var(--tag-fg)}
+.item h3{margin-top:8px;font-size:19.5px;line-height:1.28;font-weight:600;letter-spacing:-.005em;text-wrap:balance}
+.item h3 .rest{font-weight:400}
+.result{margin-top:4px;font-weight:600;max-width:64ch;text-wrap:pretty}
+.org{margin-top:3px;font-size:15px;line-height:1.45;color:var(--grey)}
+.summary{margin-top:10px;max-width:64ch;text-wrap:pretty}
+
+.bars{list-style:none;margin-top:12px;display:grid;gap:4px;max-width:80ch}
+.bars li{position:relative;padding-left:20px}
+.bars li::before{content:"";position:absolute;left:0;top:.68em;width:10px;height:0;border-top:2px solid var(--grey)}
+
+.sub{margin-top:24px}
+.sub h4{--tw:8px;--lh:23.4px;font-size:18px;line-height:1.3;font-weight:600}
+.nda{margin-top:3px;font-size:14px;line-height:1.5;color:var(--grey)}
+
+/* ---------- Case studies ----------
+   One definition list. The headline's two halves come first and larger;
+   Brief, My role and What I learned follow, smaller and quieter. */
+.case{margin-top:16px;display:grid;gap:16px}
+.case > div{min-width:0}
+.case dt{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--grey)}
+.case dd{margin:0;text-wrap:pretty}
+.case .big dt{padding-top:12px;border-top:1px solid var(--rule);font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:4px}
+.case .big dd{font-size:17.5px;line-height:1.5}
+.case .meta dd{font-size:15px;line-height:1.5;color:var(--ink-2)}
+
+/* Evidence images: native ratio, hairline, caption in mono */
+.shots{display:flex;flex-wrap:wrap;gap:16px 18px;margin-top:14px}
+.shot{margin:0;width:100%;min-width:0}
+.shot img{width:100%;height:auto;border-radius:2px;box-shadow:0 0 0 1px var(--photo-edge);background:var(--rule)}
+.shot--tall img{width:auto;height:380px;max-width:100%;object-fit:contain}
+.shot figcaption{margin-top:7px;font-family:var(--mono);font-size:12px;line-height:1.45;color:var(--grey)}
+
+/* Other experience, education */
+.desc{margin-top:6px;max-width:80ch}
+.plain{list-style:none;margin-top:8px;display:grid;gap:4px;max-width:80ch}
+.plain .k{color:var(--grey)}
+.grades .num{font-family:var(--mono);font-size:.88em;font-weight:600;color:var(--ink)}
+.certs{margin-top:28px}
+.certs h3{font-size:19.5px;line-height:1.28;font-weight:600}
+.certs ul{list-style:none;margin-top:6px;display:grid;gap:4px}
+
+/* Skills, languages, contact */
+.facts{display:grid;gap:10px;max-width:860px}
+.facts > div{display:grid;gap:1px;min-width:0}
+.facts dt{font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--grey)}
+.facts dd{margin:0;min-width:0;text-wrap:pretty}
+
+.langs{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;max-width:720px}
+.langs li{min-width:0}
+.langs b{display:block;font-weight:600}
+.langs span{font-family:var(--mono);font-size:13px;color:var(--grey);font-variant-numeric:tabular-nums}
+.interests{margin-top:18px}
+
+/* Contact: the line ends in the second ring */
+.contact{--end-gap:14px;--end-lh:28px}
+.sec.seg--to-ring{display:flow-root;padding-bottom:0;--seg-bottom:calc(-1 * (var(--end-gap) + var(--end-lh) / 2))}
+.seg--to-ring .sec-title{margin-bottom:0}
+.contact-body{padding-bottom:6px}
+.next-end{position:relative;margin-top:var(--end-gap);font-size:20px;line-height:var(--end-lh);font-weight:400;letter-spacing:-.005em;text-wrap:balance}
+.next-end .ring{left:calc(var(--spine-w) / -2 - var(--ring) / 2);top:calc(var(--end-lh) / 2 - var(--ring) / 2)}
+.contact-intro{margin:14px 0 20px}
+.contact .facts a{overflow-wrap:anywhere}
+.email{font-weight:600;user-select:all;-webkit-user-select:all}
+
+/* ---------- Wider screens ---------- */
+@media (min-width:560px){
+  .proof{gap:20px}
+  .actions{display:flex;flex-wrap:wrap}
+  .langs{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (min-width:880px){
+  :root{--date-w:168px;--spine-w:56px;--ring:24px;--label-w:9.5rem}
+  body{font-size:17px}
+  .page{padding-inline:clamp(0px, 2vw, 32px);padding-block:40px 48px}
+
+  /* masthead: photo and the "Next" label live in the when-column */
+  .id-row{position:relative;min-height:112px;align-items:flex-end}
+  .photo{position:absolute;left:calc(var(--date-w) - 112px);top:0;width:112px;height:112px}
+  .name{font-size:54px;line-height:1;padding-bottom:2px}
+  .head{--ring-y:20px;margin-top:22px;padding-bottom:32px}
+  .next{position:absolute;top:calc(var(--ring-y) - 10px);left:0;width:calc(var(--date-w) + var(--spine-w) / 2 - var(--ring) / 2 - 12px);text-align:right;line-height:20px;margin:0}
+  .role{font-size:36px;line-height:1.12}
+  .headline{margin-top:14px;font-size:24px;line-height:1.3;max-width:none}
+  .proof{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:32px}
+  .fig{font-size:28px}
+  .actions{margin-top:28px}
+
+  .sec{padding-block:24px}
+  .sec-title{--tw:24px;--lh:31.2px;font-size:26px;margin-bottom:16px}
+  .prose{font-size:19px;line-height:1.6}
+
+  /* items: when | spine | what, aligned on the first baseline */
+  .items{gap:40px}
+  .item{display:grid;grid-template-columns:var(--date-w) var(--spine-w) minmax(0,1fr);align-items:baseline;margin-left:calc(-1 * (var(--date-w) + var(--spine-w)))}
+  .when{grid-column:1;flex-direction:column;align-items:flex-end;text-align:right;gap:8px;padding-left:8px}
+  .when.tick::before{display:none}
+  .what{grid-column:3}
+  .item h3{--tw:14px;--lh:27.3px;margin-top:0;font-size:21px;line-height:1.3}
+
+  /* Case grids.
+     Words only (KOSE): needed | how in equal halves, then the three quiet fields in thirds.
+     With images (.case--ev): needed 4/9, how 5/9; quiet fields stack under "needed",
+     beside the evidence.
+     Three images (.case--row): the image row needs the full width, so it runs under
+     both texts, still inside "How it reached them" (subgrid); quiet fields in thirds. */
+  .case{grid-template-columns:repeat(6,minmax(0,1fr));column-gap:32px;row-gap:14px;margin-top:18px}
+  .case .big dd{font-size:18.5px}
+  .case .need{grid-column:1 / span 3;grid-row:1}
+  .case .how{grid-column:4 / span 3;grid-row:1}
+  .case .meta{grid-column:span 2}
+
+  .case--ev,.case--row{grid-template-columns:repeat(9,minmax(0,1fr))}
+  .case--ev{grid-template-rows:auto auto auto auto 1fr;row-gap:12px}
+  .case--ev .need{grid-column:1 / span 4;margin-bottom:4px}
+  .case--ev .how{grid-column:5 / span 5;grid-row:1 / -1}
+  .case--ev .meta{grid-column:1 / span 4}
+
+  .case--row{grid-template-rows:auto auto auto auto;row-gap:0}
+  .case--row .need{grid-column:1 / span 4;grid-row:1 / span 2;display:grid;grid-template-rows:subgrid}
+  .case--row .how{grid-column:1 / -1;grid-row:1 / span 3;display:grid;grid-template-columns:subgrid;grid-template-rows:subgrid}
+  .case--row .how > dt{grid-column:5 / span 5;grid-row:1}
+  .case--row .how > dd{grid-column:1 / -1;grid-row:2 / span 2;display:grid;grid-template-columns:subgrid;grid-template-rows:subgrid}
+  .case--row .how > dd > p{grid-column:5 / span 5;grid-row:1}
+  .case--row .how > dd > .shots{grid-column:1 / -1;grid-row:2;margin-top:16px}
+  .case--row .meta{grid-column:span 3;grid-row:4;margin-top:18px}
+
+  /* Movie night: the poster sits where the other cases show their evidence */
+  .compact{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));grid-template-rows:auto auto auto 1fr;column-gap:32px}
+  .compact > *{grid-column:1 / span 4}
+  .compact > .shots{grid-column:5 / span 5;grid-row:1 / -1;margin-top:0}
+
+  .shots{gap:14px 16px}
+  .shot{flex:1 0 auto;width:min-content;min-width:12rem;max-width:100%}
+  .shot img,.shot--tall img{width:auto;height:220px;max-width:none}
+
+  .facts > div{grid-template-columns:var(--label-w) minmax(0,1fr);column-gap:28px;align-items:baseline}
+  .certs{margin-top:32px}
+  .interests{margin-top:20px}
+
+  .contact{--end-gap:18px;--end-lh:34px}
+  .next-end{font-size:26px;font-weight:300}
+  .contact-intro{margin:16px 0 22px}
+}
+/* the item tick belongs to the date row on phone, the title on desktop */
+@media (max-width:879.98px){
+  .item h3.tick::before{display:none}
+}
+@media (min-width:1200px){
+  :root{--date-w:184px}
+}
+@media (prefers-reduced-motion: reduce){
+  .seg::after,.tick::before{transition:none}
+}
+@media print{
+  .actions,.alt-cv,.lens-line{display:none}
+}
+</style>
+
+<div class="wrap">
+<div class="page">
+
+<header class="masthead" id="top">
+  <div class="id-row lane">
+    <!-- PHOTO SLOT: to change the photo, replace src="photo.jpg" with the new file
+         (square, 640 x 640 or larger, kept next to this page). CSS sizes it:
+         84px on phone, 112px on desktop. Keep the alt text. -->
+    <img class="photo" src="photo.jpg" alt="Photo of NGUYEN Thai Bao" width="640" height="640" decoding="async">
+    <h1 class="name">NGUYEN Thai Bao</h1>
+  </div>
+
+  <div class="head lane seg" data-seg>
+    <svg class="ring" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle class="o" cx="12" cy="12" r="10.5"/><circle class="i" cx="12" cy="12" r="4"/></svg>
+    <p class="next" aria-hidden="true">Next</p>
+
+    <p class="role">Junior marketer&nbsp;<span class="dot">·</span> Brussels<br>Full-time from February 2027</p>
+    <p class="headline">I work out what people need, then make sure it reaches them.</p>
+
+    <ul class="proof" id="proof" tabindex="-1">
+      <li data-key="now">
+        <span class="fig">Now</span>
+        <span class="txt">Marketing Intern at Info Group Global, a B2B company. I am helping build its new website and made the winter gift pitch for KÖSE Cleaning’s board.</span>
+      </li>
+      <li data-key="turkuaz">
+        <span class="fig"><span aria-hidden="true">3–4<svg class="arrow" viewBox="0 0 24 12" focusable="false"><path d="M1.3 6h20.4M16.7 1.3l4.9 4.7-4.9 4.7"/></svg>60–80</span><span class="sr-only">3–4 to 60–80</span></span>
+        <span class="txt">Likes per Instagram post for Turkuaz, a restaurant, during a one-month campaign I led (student project).</span>
+      </li>
+      <li data-key="top3">
+        <span class="fig">Top 3</span>
+        <span class="txt">Top 3 team with Grainhaus by We’lbake, our sprouted-grain pretzel and marketing plan for Puratos (student competition).</span>
+      </li>
+    </ul>
+
+    <p class="lens-line" id="lens-line" hidden>Ordered for <span id="lens-name">B2B</span> roles&nbsp;<span class="dot">·</span> <a href="#top" id="lens-reset">see standard order</a></p>
+
+    <div class="actions">
+      <a class="btn btn--primary" href="Bao-Nguyen-Marketing-CV.pdf" target="_blank" rel="noopener" type="application/pdf">Download CV (PDF)</a>
+      <a class="btn" href="mailto:ntbao1204@gmail.com">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/nguyenthaibao226" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="alt-cv"><a href="Bao-Nguyen-Marketing-CV-no-photo.pdf" target="_blank" rel="noopener" type="application/pdf">CV without photo (PDF)</a></p>
+  </div>
+</header>
+
+<main id="main">
+  <p class="sr-only" id="announce" aria-live="polite"></p>
+
+  <section class="sec lane seg" data-seg id="why" aria-labelledby="h-why">
+    <h2 class="sec-title tick" id="h-why">Why marketing</h2>
+    <p class="prose">I have a natural ability to connect with people and understand what motivates them, and studying marketing at Odisee confirmed that this is where I want to use it. My father, who runs a transport company, is my inspiration: he helped me understand what customers want and need, and how much it matters that it reaches them.</p>
+  </section>
+
+  <section class="sec lane seg" data-seg id="experience" aria-labelledby="h-exp">
+    <h2 class="sec-title tick" id="h-exp">Experience and projects</h2>
+    <p class="lens-intro" id="lens-intro" hidden></p>
+
+    <div class="items" id="exp-items">
+
+      <article class="item" data-key="igg" aria-labelledby="t-igg">
+        <div class="when tick"><span><time datetime="2026-09">Sep 2026</time> – <time datetime="2026-12">Dec 2026</time></span><span class="tag tag--work">Work placement</span></div>
+        <div class="what">
+          <h3 class="tick" id="t-igg">Marketing Intern</h3>
+          <p class="org">Info Group Global (IGG)&nbsp;<span class="dot">·</span> Brussels&nbsp;<span class="dot">·</span> B2B apparel, workwear and uniforms for large companies</p>
+          <ul class="bars">
+            <li>I am helping build the company’s new website for potential customers and large brands: structuring the content and part of the design, using Claude for research and building.</li>
+            <li>I work side by side with my manager, who is teaching me the industry and how to work better with AI.</li>
+            <li>Alongside the main tasks I take on side quests: anything that is unclear or needs a closer look.</li>
+          </ul>
+
+          <div class="sub">
+            <h4 class="tick">A winter gift for KÖSE Cleaning</h4>
+            <p class="result">IGG’s directors approved my first deck. The final deck went to KÖSE Cleaning’s board.</p>
+            <p class="nda">Client work under NDA, so described in words only.</p>
+            <dl class="case">
+              <div class="big need"><dt>What people needed</dt><dd>The point was to be remembered. Employees would get a Christmas gift with their own company’s logo. The board would think of IGG for their next apparel order.</dd></div>
+              <div class="big how"><dt>How it reached them</dt><dd>Gift combinations in the chosen colours, with the client’s logo adapted for embroidery, engraving and packaging, plus Christmas versions.</dd></div>
+              <div class="meta"><dt>Brief</dt><dd>Develop a winter gift concept for KÖSE Cleaning’s employees that would make IGG memorable to the client, so they come back for a larger apparel order.</dd></div>
+              <div class="meta"><dt>My role</dt><dd>I developed the gift ideas and combinations, chose the products and colours, and built both decks.</dd></div>
+              <div class="meta"><dt>What I learned</dt><dd>My manager presented the final deck, not me, so every slide had to work in someone else’s words.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </article>
+
+      <article class="item" data-key="turkuaz" aria-labelledby="t-turkuaz">
+        <div class="when tick"><span><time datetime="2025-11">Nov 2025</time> – <time datetime="2025-12">Dec 2025</time></span><span class="tag">Student project</span></div>
+        <div class="what">
+          <h3 class="tick" id="t-turkuaz">Instagram campaign for Turkuaz</h3>
+          <p class="result">Likes per post went from <span class="num">3–4</span> to <span class="num">60–80</span> in one month. Our best post reached 753 views.</p>
+          <p class="org">Turkuaz restaurant&nbsp;<span class="dot">·</span> real client</p>
+          <dl class="case case--row">
+            <div class="big need"><dt>What people needed</dt><dd>Many people check a restaurant’s Instagram before deciding where to eat. At <span class="num">3–4</span> likes per post, Turkuaz was easy to scroll past.</dd></div>
+            <div class="big how"><dt>How it reached them</dt><dd>
+              <p>We made everything from scratch: photos and video shot on our phones, and posts designed in Canva for Instagram.</p>
+              <div class="shots">
+                <figure class="shot shot--tall"><img src="img/turkuaz-instagram.webp" width="483" height="913" loading="lazy" decoding="async" alt="Turkuaz Resto Instagram profile with the new posts"><figcaption>The feed we rebuilt: shot on phones, designed in Canva</figcaption></figure>
+                <figure class="shot shot--tall"><img src="img/turkuaz-insights.webp" width="432" height="960" loading="lazy" decoding="async" alt="Instagram insights for one Turkuaz post showing 753 views"><figcaption>Our best post: 753 views</figcaption></figure>
+                <figure class="shot"><img src="img/turkuaz-team.webp" width="1000" height="563" loading="lazy" decoding="async" alt="The student team with the owner of Turkuaz in front of the restaurant sign"><figcaption>With the owner, our real client</figcaption></figure>
+              </div>
+            </dd></div>
+            <div class="meta"><dt>Brief</dt><dd>Plan and run a one-month Instagram campaign for Turkuaz.</dd></div>
+            <div class="meta"><dt>My role</dt><dd>I led the team of four students: planning, execution, revisions and feedback, and all communication with the owner.</dd></div>
+            <div class="meta"><dt>What I learned</dt><dd>Every comment from the owner came through me, so I learned to turn feedback into clear tasks before passing it on to the team.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="item" data-key="harriet" aria-labelledby="t-harriet">
+        <div class="when tick"><span><time datetime="2025-12">Dec 2025</time></span><span class="tag">Student project</span></div>
+        <div class="what">
+          <h3 class="tick" id="t-harriet">Expansion strategy for Harriet Allure</h3>
+          <p class="result">Consolation prize from Alex Adu, co-founder of Harriet Allure.</p>
+          <p class="org">Harriet Allure (consultancy project)</p>
+          <dl class="case case--ev">
+            <div class="big need"><dt>What people needed</dt><dd>Harriet Allure wanted to grow. But more marketing would only help if storage and stock could keep up with the extra demand.</dd></div>
+            <div class="big how"><dt>How it reached them</dt><dd>
+              <p>We recommended three steps: affordable self-storage, better stock and inventory planning, then marketing planning and forecasting.</p>
+              <div class="shots">
+                <figure class="shot"><img src="img/harriet-presenting.webp" width="845" height="476" loading="lazy" decoding="async" alt="Bao’s team presenting the Harriet Allure expansion plan"><figcaption>Presenting the plan: storage and stock first</figcaption></figure>
+              </div>
+            </dd></div>
+            <div class="meta"><dt>Brief</dt><dd>Advise Harriet Allure on an expansion strategy.</dd></div>
+            <div class="meta"><dt>My role</dt><dd>I led the team of four students.</dd></div>
+            <div class="meta"><dt>What I learned</dt><dd>We were marketing students telling a business to wait before spending more on marketing. I learned to check whether a business can handle more customers before planning how to find them.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="item" data-key="movie" aria-labelledby="t-movie">
+        <div class="when tick"><span><time datetime="2025-04">Apr 2025</time></span><span class="tag">Student project</span></div>
+        <div class="what compact">
+          <h3 class="tick" id="t-movie">Movie night (ODI-CINE)</h3>
+          <p class="org">Student event</p>
+          <p class="summary">I led seven students to plan, promote and run a movie night: concept, timeline, Instagram posters, venue and equipment.</p>
+          <div class="shots">
+            <figure class="shot shot--tall"><img src="img/movienight-posters.webp" width="483" height="792" loading="lazy" decoding="async" alt="Instagram grid of ODI-CINE Movie Night posters"><figcaption>The poster series we posted on Instagram</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="item" data-key="puratos" aria-labelledby="t-puratos">
+        <div class="when tick"><span>Academic year <span class="num">2024–25</span></span><span class="tag">Student project</span></div>
+        <div class="what">
+          <h3 class="tick" id="t-puratos">Product launch for Puratos</h3>
+          <p class="result">Top 3 team.</p>
+          <p class="org">Puratos (student competition, Project Week)</p>
+          <dl class="case case--ev">
+            <div class="big need"><dt>What people needed</dt><dd>We aimed at health-conscious students and busy office workers, so we first had to know what they would actually want from a pretzel.</dd></div>
+            <div class="big how"><dt>How it reached them</dt><dd>
+              <p>Grainhaus by We’lbake, a healthy sprouted-grain pretzel, with a launch plan built on Instagram, in-store tastings and supermarkets.</p>
+              <div class="shots">
+                <figure class="shot"><img src="img/puratos-grainhaus.webp" width="1000" height="750" loading="lazy" decoding="async" alt="The team with the Grainhaus by We’lbake launch slide"><figcaption>Grainhaus by We’lbake, our sprouted-grain pretzel</figcaption></figure>
+              </div>
+            </dd></div>
+            <div class="meta"><dt>Brief</dt><dd>Develop a new product and a launch plan for Puratos during Project Week.</dd></div>
+            <div class="meta"><dt>My role</dt><dd>Research for the product development, the target customers, and how to get the message to them.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sec lane seg" data-seg id="other" aria-labelledby="h-other">
+    <h2 class="sec-title tick" id="h-other">Other experience</h2>
+    <div class="items">
+      <article class="item" aria-labelledby="t-hanoi">
+        <div class="when tick"><span><time datetime="2024-02">Feb 2024</time> – present</span></div>
+        <div class="what">
+          <h3 class="tick" id="t-hanoi">Kitchen staff</h3>
+          <p class="org">Hanoi Station, Brussels&nbsp;<span class="dot">·</span> part-time</p>
+          <p class="desc">Monitoring and reporting stock levels for four branches, and keeping safety stock so nothing runs out.</p>
+        </div>
+      </article>
+      <article class="item" aria-labelledby="t-robata">
+        <div class="when tick"><span><time datetime="2022-08">Aug 2022</time> – <time datetime="2023-02">Feb 2023</time></span></div>
+        <div class="what">
+          <h3 class="tick" id="t-robata">Service staff</h3>
+          <p class="org">Robata An, Japanese restaurant, Ho Chi Minh City</p>
+          <p class="desc">Worked with Japanese managers in a multilingual team.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec lane seg" data-seg id="education" aria-labelledby="h-edu">
+    <h2 class="sec-title tick" id="h-edu">Education</h2>
+    <div class="items">
+      <article class="item" aria-labelledby="t-odisee">
+        <div class="when tick"><span><time datetime="2023-09">Sep 2023</time> – early <span class="num">2027</span></span></div>
+        <div class="what">
+          <h3 class="tick" id="t-odisee">Bachelor of Business Management<span class="rest">, major Marketing, minor Marketing Logistics</span></h3>
+          <p class="org">Odisee University of Applied Sciences, Brussels&nbsp;<span class="dot">·</span> accelerated programme</p>
+          <ul class="plain">
+            <li><span class="k">Bachelor thesis (in progress):</span> Improving operations at a B2B company, with a focus on B2B digital marketing</li>
+            <li class="grades"><span class="k">Selected grades:</span> Purchasing and Logistics&nbsp;<span class="num">17/20</span>&nbsp;<span class="dot">·</span> Foreign Trade&nbsp;<span class="num">17/20</span>&nbsp;<span class="dot">·</span> Digital Marketing&nbsp;<span class="num">16/20</span></li>
+            <li><span class="k">Also:</span> REALGAME business simulation, demand fulfilment analysis, market analysis with SPSS</li>
+          </ul>
+        </div>
+      </article>
+      <article class="item" aria-labelledby="t-hcmute">
+        <div class="when tick"><span><time datetime="2022">2022</time> – <time datetime="2023">2023</time></span></div>
+        <div class="what">
+          <h3 class="tick" id="t-hcmute">Bachelor of English Linguistics (Business English)<span class="rest">, one year</span></h3>
+          <p class="org">Ho Chi Minh City University of Technology and Education</p>
+        </div>
+      </article>
+    </div>
+    <div class="certs">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Google Analytics Certification (GA4)</li>
+        <li>Coursera: Attract and Engage Customers with Digital Marketing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec lane seg" data-seg id="skills" aria-labelledby="h-skills">
+    <h2 class="sec-title tick" id="h-skills">Skills and tools</h2>
+    <dl class="facts">
+      <div><dt>Marketing</dt><dd>Instagram campaigns, photo and video content, pitch decks, gift and merchandise concepts, logo adaptation for embroidery, engraving and packaging, target customers and messaging, launch planning (Instagram, in-store tastings, retail)</dd></div>
+      <div><dt>Data and research</dt><dd>Excel, Power BI, SPSS (survey analysis, market analysis), Google Analytics (GA4)</dd></div>
+      <div><dt>Logistics</dt><dd>Stock monitoring and reporting, safety stock, demand fulfilment analysis</dd></div>
+      <div><dt>Design and content</dt><dd>Canva (decks, Instagram posts), photos and video shot on phone and edited in a video editor, Word</dd></div>
+      <div><dt>AI tools</dt><dd>Claude for research and building the IGG website, ChatGPT on the KÖSE Cleaning gift project, Higgsfield for images and video; also Lovable</dd></div>
+      <div><dt>Team leading</dt><dd>Student teams of four (twice) and seven</dd></div>
+    </dl>
+  </section>
+
+  <section class="sec lane seg" data-seg id="languages" aria-labelledby="h-lang">
+    <h2 class="sec-title tick" id="h-lang">Languages and interests</h2>
+    <ul class="langs">
+      <li><b>Vietnamese</b> <span>native</span></li>
+      <li><b>English</b> <span>C1</span></li>
+      <li><b>French</b> <span>A2–B1</span></li>
+      <li><b>Japanese</b> <span>A1–A2</span></li>
+    </ul>
+    <p class="interests">Reading philosophy and psychology, volleyball, and the gym.</p>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="h-contact">
+    <div class="sec lane seg seg--to-ring" data-seg>
+      <h2 class="sec-title tick" id="h-contact">Contact</h2>
+    </div>
+    <div class="lane contact-body">
+      <p class="next-end"><svg class="ring" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle class="o" cx="12" cy="12" r="10.5"/><circle class="i" cx="12" cy="12" r="4"/></svg>Next: full-time from February 2027</p>
+      <p class="prose contact-intro">If you think I could help your team, I would be glad to talk. Most people call me Bao.</p>
+      <dl class="facts">
+        <div><dt>Email</dt><dd><a class="email" href="mailto:ntbao1204@gmail.com">ntbao1204@gmail.com</a></dd></div>
+        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/nguyenthaibao226" target="_blank" rel="noopener">linkedin.com/in/nguyenthaibao226</a></dd></div>
+        <div><dt>Location</dt><dd>Brussels, Belgium</dd></div>
+        <div><dt>CV</dt><dd><a href="Bao-Nguyen-Marketing-CV.pdf" target="_blank" rel="noopener" type="application/pdf">Download CV (PDF)</a>&nbsp;<span class="dot">·</span> <a href="Bao-Nguyen-Marketing-CV-no-photo.pdf" target="_blank" rel="noopener" type="application/pdf">CV without photo (PDF)</a></dd></div>
+      </dl>
+      <div id="end" aria-hidden="true"></div>
+    </div>
+  </section>
+</main>
+
+</div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var doc = document, root = doc.documentElement;
+
+  /* ---------- 1. The line fills in, one section at a time ----------
+     Content is never hidden: only the colour of the line changes.
+     No JS or prefers-reduced-motion = the line is simply fully drawn,
+     down to the ring at Contact. */
+  var segs = Array.prototype.slice.call(doc.querySelectorAll("[data-seg]"));
+  var reduce = false;
+  try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+
+  if (!reduce && "IntersectionObserver" in window && segs.length) {
+    root.classList.add("js-line");
+    var filled = -1;
+    var fillTo = function (n) {
+      if (n <= filled) return;
+      for (var i = filled + 1, k = 0; i <= n; i++, k++) {
+        segs[i].style.setProperty("--d", (k * 160) + "ms");
+        segs[i].classList.add("is-on");
+      }
+      filled = n;
+    };
+    var io = new IntersectionObserver(function (entries) {
+      var max = -1;
+      entries.forEach(function (en) {
+        if (en.isIntersecting) max = Math.max(max, segs.indexOf(en.target));
+      });
+      if (max > -1) fillTo(max);
+    }, { rootMargin: "0px 0px -30% 0px" });
+    segs.forEach(function (s) { io.observe(s); });
+
+    /* Short last sections may never reach the upper part of the screen:
+       reaching the end of the page completes the line. */
+    var end = doc.getElementById("end");
+    if (end) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) fillTo(segs.length - 1); });
+      }).observe(end);
+    }
+  }
+
+  /* ---------- 2. Lens: tailoring by link only ----------
+     #b2b #agency #fmcg #startup, or ?lens=b2b etc. No lens = standard order.
+     Info Group Global always comes first; the lens picks the second item. */
+  var LENSES = {
+    b2b: {
+      label: "B2B",
+      intro: "For B2B roles: I am on a B2B work placement now, helping build a website for large brands, and my bachelor thesis focuses on B2B digital marketing.",
+      items: ["igg", "harriet"],
+      proof: ["now", "turkuaz", "top3"]
+    },
+    agency: {
+      label: "agency",
+      intro: "For agency roles: I handled all contact with a client on a campaign, and at my placement I built a deck for a client’s board.",
+      items: ["igg", "turkuaz"],
+      proof: ["turkuaz", "now", "top3"]
+    },
+    fmcg: {
+      label: "FMCG",
+      intro: "For FMCG roles: I have worked on a new product from research to launch plan, for students and office workers, and I monitor stock for four restaurant branches.",
+      items: ["igg", "puratos"],
+      proof: ["top3", "turkuaz", "now"]
+    },
+    startup: {
+      label: "startup",
+      intro: "For startups: with a small team I rebuilt a restaurant’s Instagram from scratch, and I use AI tools such as Claude and Higgsfield in my work.",
+      items: ["igg", "turkuaz"],
+      proof: ["turkuaz", "now", "top3"]
+    }
+  };
+  var STD_ITEMS = ["igg", "turkuaz", "harriet", "movie", "puratos"];
+  var STD_PROOF = ["now", "turkuaz", "top3"];
+
+  var proof = doc.getElementById("proof");
+  var items = doc.getElementById("exp-items");
+  var line = doc.getElementById("lens-line");
+  var lname = doc.getElementById("lens-name");
+  var intro = doc.getElementById("lens-intro");
+  var reset = doc.getElementById("lens-reset");
+  var live = doc.getElementById("announce");
+  if (!proof || !items || !line || !intro || !reset) return;
+
+  var cleared = false;   // set once the visitor asks for the standard order
+  var current = null;
+
+  function has(key) { return Object.prototype.hasOwnProperty.call(LENSES, key); }
+
+  function arrange(box, keys) {
+    var now = Array.prototype.map.call(box.children, function (c) { return c.getAttribute("data-key"); });
+    if (now.join() === keys.join()) return;
+    keys.forEach(function (k) {
+      for (var i = 0; i < box.children.length; i++) {
+        if (box.children[i].getAttribute("data-key") === k) { box.appendChild(box.children[i]); break; }
+      }
+    });
+  }
+
+  function readLens() {
+    var h = (location.hash || "").slice(1).toLowerCase();
+    if (has(h)) return h;
+    if (cleared) return null;
+    var q = "";
+    try { q = (new URLSearchParams(location.search).get("lens") || "").toLowerCase(); } catch (e) {}
+    return has(q) ? q : null;
+  }
+
+  function apply(key, speak) {
+    if (key === current) return;
+    current = key;
+    var L = key ? LENSES[key] : null;
+    arrange(proof, L ? L.proof : STD_PROOF);
+    var order = L
+      ? L.items.concat(STD_ITEMS.filter(function (k) { return L.items.indexOf(k) < 0; }))
+      : STD_ITEMS;
+    arrange(items, order);
+    if (L) {
+      lname.textContent = L.label;
+      intro.textContent = L.intro;
+      line.hidden = false;
+      intro.hidden = false;
+    } else {
+      line.hidden = true;
+      intro.hidden = true;
+      intro.textContent = "";
+    }
+    if (speak && live) {
+      live.textContent = L ? "Ordered for " + L.label + " roles." : "Standard order restored.";
+    }
+  }
+
+  apply(readLens(), false);
+
+  window.addEventListener("hashchange", function () { apply(readLens(), true); });
+
+  reset.addEventListener("click", function (e) {
+    e.preventDefault();
+    cleared = true;
+    try {
+      var u = new URL(location.href);
+      u.searchParams.delete("lens");
+      u.hash = "top";
+      history.replaceState(null, "", u.href);
+    } catch (err) { /* sandboxed: the order still resets below */ }
+    apply(null, true);
+    proof.focus();
+  });
+})();
+</script>
+
+</html>
